@@ -518,6 +518,54 @@ p {
 }
 
 /* ========================================
+   Resume Specific
+   ======================================== */
+
+.contact-info {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 16px;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.contact-info span {
+    padding: 4px 12px;
+    background: rgba(0, 113, 227, 0.08);
+    border-radius: 6px;
+}
+
+.tagline {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent) !important;
+    margin: 4px 0;
+}
+
+.course-list {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: 600;
+    color: var(--accent) !important;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: rgba(0, 113, 227, 0.08);
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.timeline-item .tagline,
+.timeline-item .highlight,
+.timeline-item .course-list {
+    margin-bottom: 8px;
+}
+
+/* ========================================
    Footer
    ======================================== */
 
