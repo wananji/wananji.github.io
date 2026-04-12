@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 | Anji Wang</title>
+    <meta name="description" content="Anji Wang 建筑设计作品集 - 住宅、文化建筑、公共空间">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Anji Wang</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="works.html" class="active">作品集</a></li>
+                <li><a href="resume.html">简历</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>作品集</h1>
+        <p>精选建筑设计项目，涵盖住宅、文化建筑与公共空间</p>
+    </header>
+
+    <!-- Works Section -->
+    <section class="section">
+        <div class="works-grid">
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Mountain Residence">
+                <div class="work-info">
+                    <h4>山居别墅</h4>
+                    <p>住宅建筑 / 2024</p>
+                </div>
+            </article>
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1486718448742-2429e8be8625?w=800&q=80" alt="Library">
+                <div class="work-info">
+                    <h4>社区图书馆</h4>
+                    <p>文化建筑 / 2024</p>
+                </div>
+            </article>
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1486718448742-2429e8be8625?w=800&q=80" alt="Cultural Center">
+                <div class="work-info">
+                    <h4>城市文化中心</h4>
+                    <p>文化建筑 / 2023</p>
+                </div>
+            </article>
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=80" alt="Waterfront Pavilion">
+                <div class="work-info">
+                    <h4>滨水展亭</h4>
+                    <p>公共空间 / 2023</p>
+                </div>
+            </article>
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&q=80" alt="Museum">
+                <div class="work-info">
+                    <h4>美术馆扩建</h4>
+                    <p>文化建筑 / 2022</p>
+                </div>
+            </article>
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80" alt="Urban Renewal">
+                <div class="work-info">
+                    <h4>旧城更新</h4>
+                    <p>城市设计 / 2022</p>
+                </div>
+            </article>
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Office Tower">
+                <div class="work-info">
+                    <h4>企业总部</h4>
+                    <p>办公建筑 / 2021</p>
+                </div>
+            </article>
+            <article class="work-item">
+                <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&q=80" alt="Park Pavilion">
+                <div class="work-info">
+                    <h4>公园展馆</h4>
+                    <p>景观建筑 / 2021</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Anji Wang. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        let lastScroll = 0;
+        const nav = document.querySelector('.nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>

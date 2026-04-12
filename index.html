@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anji Wang | 建筑师 & 设计师</title>
+    <meta name="description" content="Anji Wang - 建筑师与设计师，专注于创造具有永恒美学价值的建筑空间。">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Anji Wang</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="works.html">作品集</a></li>
+                <li><a href="resume.html">简历</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Anji Wang</h1>
+            <p class="hero-subtitle">建筑师 & 设计师</p>
+            <p class="hero-description">
+                专注于创造具有永恒美学价值的建筑空间，以简洁的线条与光的运用，
+                探索建筑与人的对话。
+            </p>
+            <div class="btn-group">
+                <a href="works.html" class="btn btn-primary">浏览作品</a>
+                <a href="contact.html" class="btn btn-secondary">取得联系</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80" alt="Architecture">
+            </div>
+            <div class="about-text">
+                <p class="eyebrow">关于我</p>
+                <h3>以建筑回应自然与人文</h3>
+                <p>
+                    我是一名建筑师，专注于住宅、文化和公共空间的设计。我相信好的建筑应该与周围环境和谐共处，同时为使用者创造独特的体验。
+                </p>
+                <p>
+                    在每一项目中，我致力于平衡美学、功能与可持续性，创造既有在地性又具国际视野的建筑作品。
+                </p>
+                <a href="resume.html" class="btn btn-secondary">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Works -->
+    <section class="section section-dark">
+        <div class="section-header">
+            <p class="eyebrow">精选作品</p>
+            <h2>代表项目</h2>
+        </div>
+        <div class="works-grid">
+            <a href="works.html" class="work-item">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Mountain Residence">
+                <div class="work-info">
+                    <h4>山居别墅</h4>
+                    <p>住宅建筑 / 2024</p>
+                </div>
+            </a>
+            <a href="works.html" class="work-item">
+                <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=800&q=80" alt="Cultural Center">
+                <div class="work-info">
+                    <h4>城市文化中心</h4>
+                    <p>文化建筑 / 2023</p>
+                </div>
+            </a>
+            <a href="works.html" class="work-item">
+                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=80" alt="Waterfront Pavilion">
+                <div class="work-info">
+                    <h4>滨水展亭</h4>
+                    <p>公共空间 / 2023</p>
+                </div>
+            </a>
+            <a href="works.html" class="work-item">
+                <img src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&q=80" alt="Museum Extension">
+                <div class="work-info">
+                    <h4>美术馆扩建</h4>
+                    <p>文化建筑 / 2022</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="section-header">
+            <p class="eyebrow">设计理念</p>
+            <h2>核心理念</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">◐</div>
+                <h4>场所精神</h4>
+                <p>尊重场地特质，创造与自然和谐的建筑</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">◑</div>
+                <h4>材料真实</h4>
+                <p>诚实运用材料，让结构本身成为美学</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">◒</div>
+                <h4>光的叙事</h4>
+                <p>以自然光为媒介，塑造空间的时间性</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Anji Wang. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Hide nav on scroll down, show on scroll up
+        let lastScroll = 0;
+        const nav = document.querySelector('.nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
