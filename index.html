@@ -13,15 +13,31 @@
     <!-- Landing Page -->
     <div class="landing" id="landing">
         <canvas id="color-bends-canvas"></canvas>
-        <div class="landing-content">
-            <h1>
-                <span class="cn">王安济</span>
-                <span class="en">Wang Anji</span>
-            </h1>
-            <nav class="landing-nav">
-                <a onclick="enter('resume.html')">简历</a>
-                <a onclick="enter('works.html')">作品</a>
-            </nav>
+        <div class="landing-layout">
+            <div class="landing-left">
+                <div class="name-vertical">
+                    <span class="cn">王安济</span>
+                    <span class="en">Wang Anji</span>
+                </div>
+                <div class="center-dot"></div>
+            </div>
+            <div class="landing-right">
+                <nav class="landing-nav">
+                    <a onclick="enter('works.html')" class="nav-item">
+                        <span class="nav-num">01</span>
+                        <span class="nav-zh">作品</span>
+                        <span class="nav-en">Works</span>
+                    </a>
+                    <a onclick="enter('resume.html')" class="nav-item">
+                        <span class="nav-num">02</span>
+                        <span class="nav-zh">简历</span>
+                        <span class="nav-en">Resume</span>
+                    </a>
+                </nav>
+                <svg class="arc-deco" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 10 280 Q 60 150 180 20" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="4 6"/>
+                </svg>
+            </div>
         </div>
     </div>
 
@@ -156,15 +172,14 @@ void main() {
                 uFrequency: { value: 1 },
                 uWarpStrength: { value: 1 },
                 uPointer: { value: new THREE.Vector2(0, 0) },
-                uMouseInfluence: { value: 1 },
-                uParallax: { value: 0.5 },
+                uMouseInfluence: { value: 0 },
+                uParallax: { value: 0 },
                 uNoise: { value: 0.1 }
             },
             premultipliedAlpha: true,
             transparent: true
         });
 
-        // init colors
         COLORS.forEach((c, i) => {
             uColorsArray[i].copy(hexToVec3(c));
         });
@@ -173,8 +188,6 @@ void main() {
         const mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
 
-        const pointerTarget = new THREE.Vector2(0, 0);
-        const pointerCurrent = new THREE.Vector2(0, 0);
         const clock = new THREE.Clock();
 
         function resize() {
@@ -190,8 +203,6 @@ void main() {
             const dt = clock.getDelta();
             const elapsed = clock.elapsedTime;
             material.uniforms.uTime.value = elapsed;
-            pointerCurrent.lerp(pointerTarget, Math.min(1, dt * 8));
-            material.uniforms.uPointer.value.copy(pointerCurrent);
             renderer.render(scene, camera);
             requestAnimationFrame(loop);
         }

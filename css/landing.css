@@ -5,13 +5,9 @@
 .landing {
     position: fixed;
     inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     z-index: 10;
     overflow: hidden;
-    background: #000;
+    background: #0a0a0a;
 }
 
 #color-bends-canvas {
@@ -24,92 +20,160 @@
     z-index: 0;
 }
 
-.landing-content {
+/* ---------- Layout ---------- */
+.landing-layout {
     position: relative;
     z-index: 2;
-    text-align: center;
-    /* 保证永远在画面正中央 */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8vw;
+    box-sizing: border-box;
+}
+
+/* ---------- Left: Name ---------- */
+.landing-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.landing h1 {
-    font-size: clamp(40px, 7vw, 100px);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    color: var(--text-primary);
+    gap: 28px;
+    animation: fadeInLeft 1s ease forwards 0.2s;
     opacity: 0;
-    animation: fadeInUp 1s ease forwards 0.3s;
-    line-height: 1.1;
 }
 
-.landing h1 .cn {
-    display: block;
+.name-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.landing h1 .en {
-    display: block;
-    font-size: clamp(10px, 1.5vw, 16px);
+.name-vertical .cn {
+    writing-mode: vertical-rl;
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: rgba(224, 224, 224, 0.88);
+    line-height: 1;
+}
+
+.name-vertical .en {
+    writing-mode: vertical-rl;
+    font-size: clamp(9px, 1vw, 12px);
     font-weight: 400;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: rgba(224, 224, 224, 0.4);
-    margin-top: 16px;
+    color: rgba(224, 224, 224, 0.25);
+}
+
+/* Center dot */
+.center-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(224, 224, 224, 0.3);
+}
+
+/* ---------- Right: Nav ---------- */
+.landing-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
 }
 
 .landing-nav {
-    margin-top: 72px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
+    animation: fadeInRight 1s ease forwards 0.4s;
     opacity: 0;
-    animation: fadeInUp 1s ease forwards 0.7s;
 }
 
-.landing-nav a {
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(224, 224, 224, 0.35);
+.nav-item {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
     cursor: pointer;
-    transition: color 0.4s ease, letter-spacing 0.4s ease;
-    position: relative;
-    padding-bottom: 8px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: border-color 0.3s ease;
 }
 
-.landing-nav a::after {
-    content: '';
+.nav-item:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.nav-item:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-num {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Courier New', monospace;
+}
+
+.nav-zh {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: clamp(24px, 3.5vw, 44px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: rgba(224, 224, 224, 0.75);
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.nav-en {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(224, 224, 224, 0.2);
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover .nav-zh {
+    color: rgba(224, 224, 224, 1);
+}
+
+.nav-item:hover .nav-en {
+    color: rgba(224, 224, 224, 0.45);
+}
+
+/* Arc decoration */
+.arc-deco {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 1px;
-    background: rgba(200, 150, 255, 0.6);
-    transition: width 0.4s ease;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    height: 240px;
+    pointer-events: none;
 }
 
-.landing-nav a:hover {
-    color: rgba(224, 224, 224, 0.85);
-    letter-spacing: 0.25em;
+/* ---------- Animations ---------- */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
 }
 
-.landing-nav a:hover::after {
-    width: 100%;
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(24px); }
+    to   { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* ---------- Leave ---------- */
 .landing.leave-up {
     transform: translateY(-100vh);
     transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
