@@ -334,6 +334,50 @@ body {
 }
 
 /* ========================================
+   Portfolio Grid
+   ======================================== */
+
+.portfolio-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.portfolio-title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.portfolio-images {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.portfolio-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.portfolio-images img:hover {
+    transform: scale(1.01);
+}
+
+/* ========================================
    Works Page
    ======================================== */
 
