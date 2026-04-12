@@ -3,158 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王安济 WANG Anji | 建筑学 & AI 设计</title>
-    <meta name="description" content="王安济 WANG Anji - 北京建筑大学建筑学学士，宾夕法尼亚大学研究生录取，专注于 AI 驱动设计与参数化建筑">
+    <title>王安济 WANG Anji</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">王安济</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="works.html">作品集</a></li>
-                <li><a href="resume.html">简历</a></li>
-                <li><a href="contact.html">联系</a></li>
-            </ul>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>王安济</h1>
-            <p class="hero-subtitle">WANG Anji</p>
-            <p class="hero-description">
-                建筑学 &middot; AI 驱动设计 &middot; 参数化建筑<br>
-                探索技术与艺术的交汇点
-            </p>
-            <div class="btn-group">
-                <a href="works.html" class="btn btn-primary">浏览作品</a>
-                <a href="resume.html" class="btn btn-secondary">查看简历</a>
-            </div>
+    <!-- Landing Page -->
+    <div class="landing" id="landing">
+        <div class="landing-bg">
+            <span class="glow"></span>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section">
-        <div class="about-content">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80" alt="Architecture">
-            </div>
-            <div class="about-text">
-                <p class="eyebrow">关于我</p>
-                <h3>建筑与人工智能的交汇</h3>
-                <p>
-                    我是北京建筑大学建筑学专业学生，已获得宾夕法尼亚大学研究生 offer。我对 AI 技术在建筑设计中的应用充满热情，探索如何用大语言模型、生成式 AI 和参数化工具革新设计流程。
-                </p>
-                <p>
-                    从非线性建筑造型设计到智能穿搭系统，我始终在寻找技术与创意结合的可能性。
-                </p>
-                <a href="resume.html" class="btn btn-secondary">了解更多</a>
-            </div>
+        <div class="landing-lines"></div>
+        <div class="landing-content">
+            <h1>
+                <span class="cn">王安济</span>
+                <span class="en">Wang Anji</span>
+            </h1>
+            <nav class="landing-nav">
+                <a onclick="enter('resume.html')">简历</a>
+                <a onclick="enter('works.html')">作品</a>
+            </nav>
         </div>
-    </section>
-
-    <!-- Featured Works -->
-    <section class="section section-dark">
-        <div class="section-header">
-            <p class="eyebrow">精选作品</p>
-            <h2>代表项目</h2>
-        </div>
-        <div class="works-grid">
-            <a href="works.html" class="work-item">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Mountain Residence">
-                <div class="work-info">
-                    <h4>非线性建筑 AI 工作流</h4>
-                    <p>生成式设计 / 2024-2025</p>
-                </div>
-            </a>
-            <a href="works.html" class="work-item">
-                <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=800&q=80" alt="Cultural Center">
-                <div class="work-info">
-                    <h4>中国国家博物馆布展</h4>
-                    <p>展览设计 / 2024</p>
-                </div>
-            </a>
-            <a href="works.html" class="work-item">
-                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=80" alt="Waterfront Pavilion">
-                <div class="work-info">
-                    <h4>身边与世界展览</h4>
-                    <p>模型制作 / 2022</p>
-                </div>
-            </a>
-            <a href="works.html" class="work-item">
-                <img src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&q=80" alt="Museum Extension">
-                <div class="work-info">
-                    <h4>北京设计周展品</h4>
-                    <p>设计展示 / 2023</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section">
-        <div class="section-header">
-            <p class="eyebrow">设计理念</p>
-            <h2>专业方向</h2>
-        </div>
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">&#9673;</div>
-                <h4>参数化设计</h4>
-                <p>Rhino + Grasshopper 编程式建模，探索非线性建筑形态</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">&#9651;</div>
-                <h4>AI 驱动设计</h4>
-                <p>Stable Diffusion / ComfyUI 工作流，生成式设计工具开发</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">&#9670;</div>
-                <h4>建筑实践</h4>
-                <p>从概念设计到建造落地，夯土结构与展览设计经验</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 王安济 WANG Anji. All rights reserved.</p>
-    </footer>
+    </div>
 
     <script>
-        // Mobile menu toggle
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
-        
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Hide nav on scroll down, show on scroll up
-        let lastScroll = 0;
-        const nav = document.querySelector('.nav');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                nav.classList.add('hidden');
+        function enter(targetUrl) {
+            const landing = document.getElementById('landing');
+            if (targetUrl === 'resume.html') {
+                landing.classList.add('leave-up');
             } else {
-                nav.classList.remove('hidden');
+                landing.classList.add('leave-down');
             }
-            
-            lastScroll = currentScroll;
-        });
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 800);
+        }
     </script>
 </body>
 </html>

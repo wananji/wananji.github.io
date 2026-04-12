@@ -3,137 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品集 | 王安济 WANG Anji</title>
-    <meta name="description" content="王安济 WANG Anji 建筑设计作品集 - 包含 AI 驱动设计、展览项目与参数化建筑作品">
+    <title>作品集 | 王安济</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">王安济</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="works.html" class="active">作品集</a></li>
-                <li><a href="resume.html">简历</a></li>
-                <li><a href="contact.html">联系</a></li>
-            </ul>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
+    <a class="back-btn" href="index.html">← 返回</a>
+
+    <div class="works-page">
         <h1>作品集</h1>
-        <p>建筑设计、AI 驱动设计工具、展览与建造实践</p>
-    </header>
+        <p class="subtitle">Works</p>
 
-    <!-- Works Section -->
-    <section class="section">
-        <div class="section-header">
-            <p class="eyebrow">AI-Driven Design</p>
-            <h2>AI 驱动设计项目</h2>
+        <div class="works-list">
+
+            <div class="item">
+                <div class="item-info">
+                    <h3>非线性建筑造型 AI 工作流</h3>
+                    <p class="meta">生成式设计 · 2024-2025</p>
+                    <p>针对非线性建筑建模找形难度大的问题，搭建基于 Stable Diffusion 的 ComfyUI 工作流，使用 ChatGPT 开发 Rhino/Grasshopper 插件进行编程式建模，将形态意向图转为模型实体。获校级最佳设计奖项。</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="非线性建筑">
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <h3>Nanostylist 智能衣橱</h3>
+                    <p class="meta">AI 产品 · 2026</p>
+                    <p>Vibe Coding 搭建基于微服务的系统框架，涵盖前端交互、后端服务、AI 视觉分析及数据流转全链路。整合 Gemini 大模型与天气/场景上下文，实现从衣物识别到穿搭方案生成。</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&q=80" alt="智能衣橱">
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <h3>大语言模型计算设计工具测试</h3>
+                    <p class="meta">AI 工作流 · 2025</p>
+                    <p>通过加州大学伯克利分校 Spatial System Lab 的"Raven"系统与 Grasshopper 插件，测试 AI 在建模工作流中的推理能力，利用 AI 完成 Grasshopper 电池组制作与建筑形态设计。</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=800&q=80" alt="计算设计">
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <h3>中国国家博物馆"守护与重光"布展</h3>
+                    <p class="meta">夯土建造 · 2024</p>
+                    <p>与团队协作从土料拌合、发酵、支模到夯筑共同完成两件移动式夯土墙展品，参与中国国家博物馆夯土背景墙的现场施工与后续布展安装。</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80" alt="国家博物馆">
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-info">
+                    <h3>"身边与世界"展览</h3>
+                    <p class="meta">模型制作 · 2022</p>
+                    <p>与知名艺术家李涵合作，探索和记录北京城中村中的野生营造建筑，制作其 1:500 模型。展出于北京 798 艺术中心"山中天·玄馆"开馆展。</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&q=80" alt="身边与世界">
+                </div>
+            </div>
+
         </div>
-        <div class="works-grid">
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="非线性建筑">
-                <div class="work-info">
-                    <h4>非线性建筑造型设计 AI 工作流</h4>
-                    <p>生成式设计 / 2024-2025</p>
-                </div>
-            </article>
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=800&q=80" alt="计算设计工具">
-                <div class="work-info">
-                    <h4>大语言模型计算设计工具测试</h4>
-                    <p>AI 工作流 / 2025</p>
-                </div>
-            </article>
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=80" alt="文生图">
-                <div class="work-info">
-                    <h4>文生图小程序开发</h4>
-                    <p>Stable Diffusion / 2023</p>
-                </div>
-            </article>
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&q=80" alt="智能衣橱">
-                <div class="work-info">
-                    <h4>Nanostylist 智能衣橱</h4>
-                    <p>Vibe Coding / 2026</p>
-                </div>
-            </article>
-        </div>
-    </section>
+    </div>
 
-    <!-- Exhibitions Section -->
-    <section class="section section-dark">
-        <div class="section-header">
-            <p class="eyebrow">Exhibitions & Practice</p>
-            <h2>展览与建造实践</h2>
-        </div>
-        <div class="works-grid">
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80" alt="国家博物馆">
-                <div class="work-info">
-                    <h4>中国国家博物馆"守护与重光"布展</h4>
-                    <p>夯土建造 / 2024</p>
-                </div>
-            </article>
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="北京设计周">
-                <div class="work-info">
-                    <h4>北京设计周展品</h4>
-                    <p>建筑设计 / 2023</p>
-                </div>
-            </article>
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&q=80" alt="身边与世界">
-                <div class="work-info">
-                    <h4>"身边与世界"展览</h4>
-                    <p>模型制作 / 2022</p>
-                </div>
-            </article>
-            <article class="work-item">
-                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80" alt="AI进校园">
-                <div class="work-info">
-                    <h4>AI 进校园公益项目</h4>
-                    <p>Midjourney / 2023</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 王安济 WANG Anji. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const navToggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
-        
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        let lastScroll = 0;
-        const nav = document.querySelector('.nav');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                nav.classList.add('hidden');
-            } else {
-                nav.classList.remove('hidden');
-            }
-            lastScroll = currentScroll;
-        });
-    </script>
 </body>
 </html>
