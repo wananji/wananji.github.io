@@ -1,0 +1,143 @@
+/* ========================================
+   Catalog Page Styles
+   ======================================== */
+
+.catalog-page {
+    padding: 120px 40px 80px;
+}
+
+.catalog-page h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.catalog-page .subtitle {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.catalog-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 目录页（无 project 参数时）——显示全部项目列表 */
+.catalog-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+}
+
+.catalog-item:last-child {
+    border-bottom: none;
+}
+
+.catalog-item-title h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.catalog-item-meta {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.catalog-item-image {
+    aspect-ratio: 16 / 10;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.catalog-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.catalog-item:hover .catalog-item-image img {
+    transform: scale(1.03);
+}
+
+/* 封面入口页（有 project 参数时） */
+.catalog-cover-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.catalog-cover-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.catalog-cover-item:hover img {
+    transform: scale(1.02);
+}
+
+.catalog-cover-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.catalog-cover-info h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.catalog-cover-hint {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+    .catalog-page {
+        padding: 100px 24px 60px;
+    }
+
+    .catalog-item {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 0;
+    }
+
+    .catalog-cover-info {
+        padding: 24px;
+    }
+
+    .catalog-cover-info h2 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,58 @@
+/* ========================================
+   Gallery Page - 竖向连续滚动
+   ======================================== */
+
+.gallery-page {
+    padding: 120px 0 80px;
+}
+
+.gallery-page h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.gallery-page .subtitle {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* 竖向连续滚动画廊 */
+.gallery-scroller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.gallery-img-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2px;
+}
+
+.gallery-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .gallery-page {
+        padding: 100px 0 60px;
+    }
+
+    .gallery-page h1 {
+        font-size: 32px;
+    }
+
+    .gallery-img-wrap {
+        max-width: 100%;
+    }
+}
