@@ -218,61 +218,66 @@ void main() {
         requestAnimationFrame(loop);
     })();
 
-        function typeText(elId, cursorId, text, speed, callback) {
-            const el = document.getElementById(elId);
-            const cursor = document.getElementById(cursorId);
+        const PHRASES = [
+            "Welcome to my personal website!",
+            'Click "Start" to view more information.'
+        ];
+
+        function typeText(el, cursor, text, speed, onDone) {
             let i = 0;
-            const interval = setInterval(() => {
+            const iv = setInterval(() => {
                 el.textContent = text.slice(0, ++i);
-                if (i >= text.length) {
-                    clearInterval(interval);
-                    if (callback) callback();
-                }
+                if (i >= text.length) { clearInterval(iv); onDone && onDone(); }
             }, speed);
         }
 
-        function blinkCursor(cursorEl, show) {
-            if (!cursorEl) return;
-            if (show) {
-                gsap.set(cursorEl, { opacity: 1 });
-                gsap.to(cursorEl, {
-                    opacity: 0,
-                    duration: 0.5,
-                    repeat: -1,
-                    yoyo: true,
-                    ease: 'power2.inOut'
+        function deleteText(el, speed, onDone) {
+            let len = el.textContent.length;
+            const iv = setInterval(() => {
+                if (--len <= 0) { clearInterval(iv); el.textContent = ''; onDone && onDone(); }
+                else el.textContent = el.textContent.slice(0, -1);
+            }, speed);
+        }
+
+        function runCycle(idx) {
+            const el1 = document.getElementById('typing-1');
+            const el2 = document.getElementById('typing-2');
+            const cur1 = document.getElementById('cursor-1');
+            const cur2 = document.getElementById('cursor-2');
+
+            if (idx % 2 === 0) {
+                // Type line 1
+                gsap.set(cur1, { opacity: 1 });
+                gsap.to(cur1, { opacity: 0, duration: 0.5, repeat: -1, yoyo: true, ease: 'power2.inOut' });
+                gsap.set(cur2, { opacity: 0 });
+                typeText(el1, cur1, PHRASES[0], 45, () => {
+                    gsap.killTweensOf(cur1);
+                    gsap.set(cur1, { opacity: 0 });
+                    setTimeout(() => runCycle(idx + 1), 800);
                 });
             } else {
-                gsap.killTweensOf(cursorEl);
-                gsap.set(cursorEl, { opacity: 0 });
+                // Delete line 1, type line 2
+                deleteText(el1, 28, () => {
+                    gsap.set(cur2, { opacity: 1 });
+                    gsap.to(cur2, { opacity: 0, duration: 0.5, repeat: -1, yoyo: true, ease: 'power2.inOut' });
+                    typeText(el2, cur2, PHRASES[1], 35, () => {
+                        gsap.killTweensOf(cur2);
+                        gsap.set(cur2, { opacity: 0 });
+                        setTimeout(() => runCycle(idx + 1), 800);
+                    });
+                });
             }
         }
 
         function enter(targetUrl) {
             const landing = document.getElementById('landing');
-            if (targetUrl === 'resume.html') {
-                landing.classList.add('leave-up');
-            } else {
-                landing.classList.add('leave-down');
-            }
-            setTimeout(() => {
-                window.location.href = targetUrl;
-            }, 800);
+            if (targetUrl === 'resume.html') landing.classList.add('leave-up');
+            else landing.classList.add('leave-down');
+            setTimeout(() => { window.location.href = targetUrl; }, 800);
         }
 
-        // Typing animation sequence
         window.addEventListener('load', () => {
-            const typing1 = document.getElementById('typing-1');
-            const cursor1 = document.getElementById('cursor-1');
-            const typing2 = document.getElementById('typing-2');
-            const cursor2 = document.getElementById('cursor-2');
-
-            typeText('typing-1', 'cursor-1', "Welcome to my personal website!", 45, () => {
-                blinkCursor(cursor1, false);
-                typeText('typing-2', 'cursor-2', 'Click "Start" to view more information.', 35, () => {
-                    blinkCursor(cursor2, false);
-                });
-            });
+            runCycle(0);
         });
     </script>
 </body>
