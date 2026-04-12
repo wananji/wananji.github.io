@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/landing.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
 
@@ -34,6 +35,14 @@
                         <span class="nav-en">Resume</span>
                     </a>
                 </nav>
+                <div class="typing-container">
+                    <div class="typing-line">
+                        <span id="typing-1" class="typing-text"></span><span id="cursor-1" class="typing-cursor">|</span>
+                    </div>
+                    <div class="typing-line typing-line--small">
+                        <span id="typing-2" class="typing-text"></span><span id="cursor-2" class="typing-cursor">|</span>
+                    </div>
+                </div>
                 <svg class="arc-deco" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M 10 280 Q 60 150 180 20" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="4 6"/>
                 </svg>
@@ -209,17 +218,62 @@ void main() {
         requestAnimationFrame(loop);
     })();
 
-    function enter(targetUrl) {
-        const landing = document.getElementById('landing');
-        if (targetUrl === 'resume.html') {
-            landing.classList.add('leave-up');
-        } else {
-            landing.classList.add('leave-down');
+        function typeText(elId, cursorId, text, speed, callback) {
+            const el = document.getElementById(elId);
+            const cursor = document.getElementById(cursorId);
+            let i = 0;
+            const interval = setInterval(() => {
+                el.textContent = text.slice(0, ++i);
+                if (i >= text.length) {
+                    clearInterval(interval);
+                    if (callback) callback();
+                }
+            }, speed);
         }
-        setTimeout(() => {
-            window.location.href = targetUrl;
-        }, 800);
-    }
+
+        function blinkCursor(cursorEl, show) {
+            if (!cursorEl) return;
+            if (show) {
+                gsap.set(cursorEl, { opacity: 1 });
+                gsap.to(cursorEl, {
+                    opacity: 0,
+                    duration: 0.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'power2.inOut'
+                });
+            } else {
+                gsap.killTweensOf(cursorEl);
+                gsap.set(cursorEl, { opacity: 0 });
+            }
+        }
+
+        function enter(targetUrl) {
+            const landing = document.getElementById('landing');
+            if (targetUrl === 'resume.html') {
+                landing.classList.add('leave-up');
+            } else {
+                landing.classList.add('leave-down');
+            }
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 800);
+        }
+
+        // Typing animation sequence
+        window.addEventListener('load', () => {
+            const typing1 = document.getElementById('typing-1');
+            const cursor1 = document.getElementById('cursor-1');
+            const typing2 = document.getElementById('typing-2');
+            const cursor2 = document.getElementById('cursor-2');
+
+            typeText('typing-1', 'cursor-1', "Welcome to my personal website!", 45, () => {
+                blinkCursor(cursor1, false);
+                typeText('typing-2', 'cursor-2', 'Click "Start" to view more information.', 35, () => {
+                    blinkCursor(cursor2, false);
+                });
+            });
+        });
     </script>
 </body>
 </html>
