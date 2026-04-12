@@ -11,20 +11,27 @@
     align-items: center;
     z-index: 10;
     overflow: hidden;
+    background: #000;
 }
 
 #color-bends-canvas {
-    position: absolute;
-    inset: 0;
-    width: 100% !important;
-    height: 100% !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: block;
+    z-index: 0;
 }
 
 .landing-content {
     position: relative;
     z-index: 2;
     text-align: center;
+    /* 保证永远在画面正中央 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .landing h1 {

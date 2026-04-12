@@ -186,13 +186,6 @@ void main() {
         resize();
         window.addEventListener('resize', resize);
 
-        window.addEventListener('pointermove', e => {
-            pointerTarget.set(
-                (e.clientX / window.innerWidth) * 2 - 1,
-                -((e.clientY / window.innerHeight) * 2 - 1)
-            );
-        });
-
         function loop() {
             const dt = clock.getDelta();
             const elapsed = clock.elapsedTime;
