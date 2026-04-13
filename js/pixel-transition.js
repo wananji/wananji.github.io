@@ -8,7 +8,7 @@
    ======================================== */
 
 (function () {
-    const CONTAINER_ID = 'pixel-transition-overlay';
+    const CONTAINER_ID = 'pixel-landing';
 
     /* ── DOM helpers ── */
     function createOverlay() {
