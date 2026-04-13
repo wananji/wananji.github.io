@@ -6,6 +6,9 @@
     <title>作品 | 王安济</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/gallery-page.css">
+    <link rel="stylesheet" href="../css/pixel-transition.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="../js/pixel-transition.js"></script>
 </head>
 <body>
 
@@ -71,16 +74,22 @@
                 '../images/4_排版_46-47_p1.png',
             ]
         },
-        'other': {
-            title: 'Other Works',
-            meta: '05 · 2024–2025',
+        'toh': {
+            title: 'Theatre of History',
+            meta: '05 · 2025 · Villeneuve, France',
             images: [
-                '../images/5_A1_CY2215_p1.png',
-                '../images/5_02世界模型_p1.png',
-                '../images/5_02世界模型_p2.png',
+                '../images/6_theatre_of_history_p1.png',
+                '../images/6_排版_01-02_p1.png',
             ]
-        }
-    };
+        },
+        'rol': {
+            title: 'The Redemption of Light',
+            meta: '06 · 2025 · Dunhuang, China',
+            images: [
+                '../images/7_排版_01-02_p1.png',
+            ]
+        },
+}
 
     const project = projects[projectKey];
 
@@ -102,6 +111,12 @@
     } else {
         document.getElementById('gallery-title').textContent = '未找到项目';
     }
+    </script>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        pixelEnter('#ffffff');
+    });
     </script>
 
 </body>

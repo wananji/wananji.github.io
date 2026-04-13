@@ -1,0 +1,32 @@
+/* ========================================
+   Pixel Transition — CSS
+   ======================================== */
+
+/* Landing 容器，覆盖整个页面 */
+#pixel-landing {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+    /* 默认不可见，通过 JS 动画控制 */
+    opacity: 1;
+}
+
+/* canvas 全屏 */
+#pixel-landing canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 单个像素格子 */
+.pixel-cell {
+    position: absolute;
+    background: #ffffff;
+    transform-origin: center center;
+    will-change: transform, opacity;
+}

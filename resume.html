@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>简历 | 王安济</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pixel-transition.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="js/pixel-transition.js"></script>
 </head>
 <body>
 
-    <a class="back-btn" href="index.html">← 返回</a>
+            <a class="back-btn" href="index.html">← 返回</a>
 
     <div class="resume-page">
         <h1>王安济</h1>
@@ -47,22 +50,22 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="date">02/2026 — 至今</div>
-                <h3>Nanostylist 智能衣橱</h3>
+                <h3><a href="https://nanostylist.com" target="_blank" rel="noopener">Nanostylist 智能衣橱</a></h3>
                 <p>Vibe Coding 搭建微服务系统框架，整合 Gemini 大模型与天气/场景上下文，实现从衣物识别到穿搭方案生成的端到端。</p>
             </div>
             <div class="timeline-item">
                 <div class="date">06/2025 — 07/2025</div>
-                <h3>大语言模型计算设计工具测试</h3>
+                <h3><a href="https://www.raven.build" target="_blank" rel="noopener">大语言模型计算设计工具测试</a></h3>
                 <p>通过加州大学伯克利分校 Spatial System Lab 的"Raven"系统与 Grasshopper 插件，测试 AI 在建模工作流中的推理能力，完成非线性建筑形态设计。</p>
             </div>
             <div class="timeline-item">
                 <div class="date">09/2024 — 02/2025</div>
-                <h3>非线性建筑造型 AI 工作流</h3>
+                <h3><a href="works/gallery.html?project=avi" target="_blank" rel="noopener">非线性建筑造型 AI 工作流</a></h3>
                 <p>搭建基于 Stable Diffusion 的 ComfyUI 工作流，使用 ChatGPT 开发 Rhino/Grasshopper 插件进行编程式建模。获校级最佳设计奖项。</p>
             </div>
             <div class="timeline-item">
                 <div class="date">05/2023</div>
-                <h3>AI 进校园公益项目</h3>
+                <h3><a href="https://mp.weixin.qq.com/s/LCmPxOM-09oyFWqnm3yQqg" target="_blank" rel="noopener">AI 进校园公益项目</a></h3>
                 <p>使用 Midjourney 将幼儿园小朋友"理想中的幼儿园"涂鸦进行图生图重绘，作品在北京设计周线上平台展出。</p>
             </div>
         </div>
@@ -71,7 +74,7 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="date">06/2024</div>
-                <h3>中国国家博物馆"守护与重光"布展</h3>
+                <h3><a href="https://mp.weixin.qq.com/s/9iTrUN83QcNbP9CG9LxFhw" target="_blank" rel="noopener">中国国家博物馆"守护与重光"布展</a></h3>
                 <p>与团队协作完成两件移动式夯土墙展品，参与现场施工与后续布展安装。</p>
             </div>
             <div class="timeline-item">
@@ -81,7 +84,7 @@
             </div>
             <div class="timeline-item">
                 <div class="date">11/2022</div>
-                <h3>"身边与世界"展览</h3>
+                <h3><a href="https://mp.weixin.qq.com/s/or4n-CEPzLyvLNpXF0EPbw" target="_blank" rel="noopener">"身边与世界"展览</a></h3>
                 <p>与知名艺术家李涵合作，制作北京城中村野生营造建筑 1:500 模型，展出地点为北京 798 艺术中心"山中天·玄馆"。</p>
             </div>
         </div>
@@ -89,19 +92,24 @@
         <p class="section-title">技能</p>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>AI & 工具</h3>
-                <p>Cursor / Coze · Stable Diffusion / ComfyUI · Midjourney · 可灵 / 即梦</p>
+                <h3>AI tools</h3>
+                <p>Cursor / Coze / Stable Diffusion / ComfyUI / Midjourney / 可灵 / 即梦</p>
             </div>
             <div class="timeline-item">
                 <h3>设计软件</h3>
-                <p>AutoCAD · Photoshop · InDesign / Illustrator · SketchUp · Rhino / Grasshopper</p>
+                <p>AutoCAD / Photoshop / InDesign / Illustrator / SketchUp / Rhino / Grasshopper</p>
             </div>
             <div class="timeline-item">
                 <h3>语言</h3>
-                <p>中文（母语）· 英语（IELTS 6.5）</p>
+                <p>中文（母语） / 英语（IELTS 6.5）</p>
             </div>
         </div>
     </div>
 
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        pixelEnter('#0a0a0a');
+    });
+    </script>
 </body>
 </html>

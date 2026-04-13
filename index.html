@@ -6,8 +6,10 @@
     <title>王安济 WANG Anji</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/pixel-transition.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/pixel-transition.js"></script>
 </head>
 <body>
 
@@ -211,10 +213,7 @@ void main() {
     })();
 
         function enter(targetUrl) {
-            const landing = document.getElementById('landing');
-            if (targetUrl === 'resume.html') landing.classList.add('leave-up');
-            else landing.classList.add('leave-down');
-            setTimeout(() => { window.location.href = targetUrl; }, 800);
+            window.location.href = targetUrl;
         }
     </script>
 </body>
