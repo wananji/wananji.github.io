@@ -1,9 +1,14 @@
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 function MedicalAgentOS() {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="bg-surface-canvas font-body-main antialiased">
@@ -17,7 +22,7 @@ function MedicalAgentOS() {
           <div className="max-w-[1200px] mx-auto px-6 relative z-10 text-center">
             <h1 className="font-hero-title text-hero-title max-w-4xl mx-auto mb-8 text-primary leading-tight">
               Medical Agent OS 2.0<br/>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">专为医疗机构打造的 AI 原生运营操作系统</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-500">专为医疗机构打造的 AI 原生运营操作系统</span>
             </h1>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-10">
               全面超越传统人力模式。从繁琐的医疗流程中解脱，将医疗专业知识转化为高流转、高效率的数字化资产。
@@ -27,16 +32,6 @@ function MedicalAgentOS() {
               <button className="border border-border-subtle bg-white px-8 py-4 rounded-full font-semibold hover:bg-surface-soft transition-all w-full sm:w-auto flex items-center justify-center gap-2">
                 <span className="material-symbols-outlined">play_circle</span> 查看演示视频
               </button>
-            </div>
-          </div>
-          {/* Product Preview Image */}
-          <div className="max-w-[1000px] mx-auto mt-20 px-6">
-            <div className="rounded-xl border border-border-subtle overflow-hidden shadow-2xl">
-              <img 
-                className="w-full h-auto" 
-                alt="Medical Agent OS 2.0 interface dashboard" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4IIbwIwvPHy_JU0zDcOHoX8GmifXcIwr3qzhtD7YvaqW6y7F0VMTIXgjYonlg9vGWfj7xPEs41gAeHkD3H3tGJbhcmXzQImyOFRWlH6Kka6wqox7hqf6YepELX7PG4AjMiGms3yvQ3-FufZOsPxJpL2vwObrvvSTqhmpeN2ITkk6lp-OA-EhO7nndd4Pb4AgMn822t63XxJ-OQBKIU-TgywqK3GJPW99Ne4h-bZWbSxpjB_WiduAQLvpRX9_A6VSHAWgLFVs6X3x8" 
-              />
             </div>
           </div>
         </section>
@@ -63,12 +58,8 @@ function MedicalAgentOS() {
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-square bg-white rounded-3xl p-8 border border-border-subtle flex flex-col justify-center items-center text-center">
-                  <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                    <span className="text-blue-600 text-4xl">🧠</span>
-                  </div>
-                  <h3 className="text-card-title font-card-title mb-4">决策大脑 (Decision Core)</h3>
-                  <p className="text-text-secondary text-sm">内置万亿级医学知识图谱，支持多步长链推理与自动化任务编排。</p>
+                <div className="aspect-square bg-white rounded-3xl p-0 flex items-center justify-center">
+                  <img src="/新范式6.png" alt="迈向医疗智能的新范式" className="w-full h-full object-cover rounded-2xl" />
                 </div>
               </div>
             </div>

@@ -8,6 +8,11 @@ import FooterCTA from './components/FooterCTA'
 import Footer from './components/Footer'
 import MedicalAgentOS from './components/MedicalAgentOS'
 import TongRen from './components/TongRen'
+import BeijingStomatology from './components/BeijingStomatology'
+import CodeTraining from './components/CodeTraining'
+import CodeOperation from './components/CodeOperation'
+import CodeMedicalTraining from './components/CodeMedicalTraining'
+import Fujian from './components/Fujian'
 
 function App() {
   return (
@@ -27,6 +32,11 @@ function App() {
       } />
       <Route path="/medical-agent-os" element={<MedicalAgentOS />} />
       <Route path="/tongren" element={<TongRen />} />
+      <Route path="/beijing-stomatology" element={<BeijingStomatology />} />
+      <Route path="/code-training" element={<CodeTraining />} />
+      <Route path="/code-operation" element={<CodeOperation />} />
+      <Route path="/code-medical-training" element={<CodeMedicalTraining />} />
+      <Route path="/fujian" element={<Fujian />} />
     </Routes>
   )
 }

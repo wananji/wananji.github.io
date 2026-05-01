@@ -8,18 +8,22 @@ function SolutionsSection() {
       title: "Medical Agent OS 2.0",
       description: "自动化的企业级智能助理，重塑工作流程。",
       image: "/image2.png",
+      imageLabel: "Medical Agent OS 2.0",
       link: "/medical-agent-os"
     },
     {
-      title: "VKA资产化引擎",
-      description: "深度学习研究的前沿阵地，探索无限可能。",
+      title: "名医数字化IP运营",
+      description: "从人力密集到数字资产的跃迁",
       image: "/image4.jpg",
-      link: "/tongren"
+      imageLabel: "名医IP运营",
+      link: "/code-operation"
     },
     {
-      title: "GEO 增长引擎",
-      description: "为全球顶级企业提供最强大的 AI 算力支持。",
-      image: "/image1.png"
+      title: "医疗机构数字化转型人员培训",
+      description: "手把手教您解决转型难题",
+      image: "/image1.png",
+      imageLabel: "人员培训",
+      link: "/code-medical-training"
     }
   ];
 
@@ -48,7 +52,7 @@ function SolutionsSection() {
               }}
             >
               <span className="text-white font-bold text-2xl tracking-widest drop-shadow-lg">
-                {solution.title}
+                {solution.imageLabel}
               </span>
             </div>
             <h3 className="font-card-title text-card-title">{solution.title}</h3>

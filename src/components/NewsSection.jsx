@@ -1,19 +1,25 @@
+import { useNavigate } from 'react-router-dom'
+
 function NewsSection() {
+  const navigate = useNavigate()
   const newsItems = [
     {
       title: "北京口腔医院 × 数字化AI项目",
       date: "2024年9月12日",
-      image: "/teeth.png"
+      image: "/teeth.png",
+      route: "/beijing-stomatology"
     },
     {
       title: "同仁眼科医院 × AI临床教学一体化平台",
       date: "2024年9月05日",
-      image: "/glasses.jpg"
+      image: "/glasses.jpg",
+      route: "/tongren"
     },
     {
       title: "福建医科大学附属第一医院 × 自动医疗报告解读系统",
       date: "2024年8月28日",
-      image: "/文件夹.jpg"
+      image: "/文件夹.jpg",
+      route: "/fujian"
     }
   ];
 
@@ -28,7 +34,11 @@ function NewsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
           {newsItems.map((item, index) => (
-            <div key={index} className="bg-white p-sm rounded-xl border border-border-subtle flex gap-md hover:shadow-md transition-all cursor-pointer">
+            <div
+              key={index}
+              onClick={() => item.route && navigate(item.route)}
+              className="bg-white p-sm rounded-xl border border-border-subtle flex gap-md hover:shadow-md transition-all cursor-pointer"
+            >
               {item.image ? (
                 <div className="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
                   <img 
