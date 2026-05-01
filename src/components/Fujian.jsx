@@ -24,6 +24,9 @@ function Fujian() {
             <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">calendar_today</span> 2026 年 4 月 27 日</span>
             <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">schedule</span> 阅读需 8 分钟</span>
           </div>
+          <div className="w-full mt-12 rounded-xl overflow-hidden">
+            <img src="/读报告.png" alt="读报告" className="w-full h-auto object-cover" />
+          </div>
         </header>
 
         {/* Key Stats Grid */}

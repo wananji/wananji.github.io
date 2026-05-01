@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>三层递进式安全体系</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#1c1b1b",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#c4c7c7",
+                      "surface-soft": "#F5F5F5",
+                      "tertiary-fixed": "#e6e1df",
+                      "surface-container": "#f1edec",
+                      "on-surface-variant": "#444748",
+                      "gradient-green": "linear-gradient(135deg, #22C55E 0%, #86EFAC 100%)",
+                      "gradient-rose": "linear-gradient(135deg, #FF85B1 0%, #FFE4B2 100%)",
+                      "surface-tint": "#5f5e5e",
+                      "outline": "#747878",
+                      "error-container": "#ffdad6",
+                      "surface": "#fdf8f8",
+                      "surface-canvas": "#FFFFFF",
+                      "inverse-surface": "#313030",
+                      "primary": "#000000",
+                      "on-secondary-fixed-variant": "#00513d",
+                      "surface-container-highest": "#e5e2e1",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "text-primary": "#1A1A1A",
+                      "primary-fixed": "#e5e2e1",
+                      "tertiary": "#000000",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#c9c6c5",
+                      "secondary-fixed-dim": "#61dbb4",
+                      "secondary": "#006c52",
+                      "gradient-blue": "linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)",
+                      "surface-container-high": "#ebe7e6",
+                      "on-background": "#1c1b1b",
+                      "surface-container-low": "#f7f3f2",
+                      "on-tertiary-fixed-variant": "#484645",
+                      "inverse-on-surface": "#f4f0ef",
+                      "on-tertiary-fixed": "#1d1b1a",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed": "#002117",
+                      "gradient-orange": "linear-gradient(135deg, #F97316 0%, #FDE68A 100%)",
+                      "on-tertiary-container": "#868381",
+                      "gradient-purple": "linear-gradient(135deg, #C4B5FD 0%, #93C5FD 100%)",
+                      "tertiary-fixed-dim": "#cac6c3",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "text-secondary": "#6B6B6B",
+                      "surface-bright": "#fdf8f8",
+                      "on-error": "#ffffff",
+                      "background": "#fdf8f8",
+                      "surface-variant": "#e5e2e1",
+                      "gradient-teal": "linear-gradient(135deg, #0D9488 0%, #34D399 100%)",
+                      "secondary-fixed": "#7ff8cf",
+                      "on-secondary-container": "#007056",
+                      "on-primary-fixed-variant": "#474646",
+                      "on-primary-container": "#858383",
+                      "primary-container": "#1c1b1b",
+                      "secondary-container": "#7cf5cc",
+                      "text-tertiary": "#9E9E9E",
+                      "surface-dim": "#ddd9d8",
+                      "border-subtle": "#E8E8E8",
+                      "tertiary-container": "#1d1b1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "sm": "16px",
+                      "md": "24px",
+                      "xl": "48px",
+                      "lg": "32px",
+                      "container-max": "1200px",
+                      "xs": "8px"
+              },
+              "fontFamily": {
+                      "nav-item": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Inter"
+                      ],
+                      "meta-data": [
+                              "Inter"
+                      ],
+                      "section-title": [
+                              "Inter"
+                      ],
+                      "hero-title": [
+                              "Inter"
+                      ],
+                      "body-main": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "nav-item": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "meta-data": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "section-title": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "hero-title": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-main": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface-canvas text-text-primary font-body-main selection:bg-surface-soft selection:text-text-primary antialiased">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md text-zinc-900 dark:text-zinc-50 font-nav-item text-nav-item docked full-width top-0 sticky z-40 border-b border-zinc-100 dark:border-zinc-800">
+<div class="flex justify-between items-center h-16 px-6 max-w-[1200px] mx-auto w-full">
+<div class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">OpenAI</div>
+<div class="hidden md:flex items-center space-x-lg">
+<a class="text-zinc-900 dark:text-zinc-50 font-semibold hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 opacity-70 transition-opacity" href="#">Research</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200" href="#">Products</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200" href="#">Safety</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200" href="#">Company</a>
+</div>
+<div class="flex items-center space-x-sm">
+<button class="hidden md:block px-sm py-xs text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Log in</button>
+<button class="px-sm py-xs bg-primary text-on-primary rounded-DEFAULT font-medium hover:bg-on-surface-variant transition-colors">Sign up</button>
+</div>
+</div>
+</nav>
+<!-- Modal Backdrop & Container -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 sm:p-6">
+<div class="relative w-full max-w-[1200px] bg-surface-canvas rounded-2xl shadow-2xl overflow-y-auto max-h-[90vh]">
+<!-- Close Button -->
+<button aria-label="Close modal" class="absolute top-6 right-6 p-2 rounded-full hover:bg-surface-soft text-text-secondary hover:text-text-primary transition-colors z-10">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<!-- Main Content Canvas inside Modal -->
+<main class="w-full px-6 py-xl md:py-[80px] md:px-12">
+<!-- Hero Section -->
+<header class="mb-xl text-center max-w-3xl mx-auto mt-4">
+<h1 class="font-hero-title text-hero-title text-text-primary mb-md">三层递进式安全体系</h1>
+<p class="font-body-main text-body-main text-text-secondary text-lg">从物理隔离到数据脱敏，三级递进式安全体系确保医疗数据零泄露</p>
+</header>
+<!-- Tiers Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Tier 1 -->
+<div class="bg-surface-canvas border border-border-subtle rounded-xl p-lg hover:shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300">
+<h2 class="font-card-title text-card-title text-text-primary mb-sm">L1 本地一体机</h2>
+<div class="inline-flex items-center px-sm py-xs bg-surface-soft rounded-full text-text-secondary font-meta-data text-meta-data mb-md">
+                        语音不出诊室，物理级安全
+                    </div>
+<p class="font-body-main text-body-main text-text-secondary">
+                        诊室内本地一体机处理语音转写，确保敏感语音数据不离开物理诊室空间。
+                    </p>
+</div>
+<!-- Tier 2 -->
+<div class="bg-surface-canvas border border-border-subtle rounded-xl p-lg hover:shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300">
+<h2 class="font-card-title text-card-title text-text-primary mb-sm">L2 私有云</h2>
+<div class="inline-flex items-center px-sm py-xs bg-surface-soft rounded-full text-text-secondary font-meta-data text-meta-data mb-md">
+                        核心数据与知识库不出机构
+                    </div>
+<p class="font-body-main text-body-main text-text-secondary">
+                        存储核心运营数据与专家知识库，通过私有云技术实现逻辑隔离，确保核心资产安全。
+                    </p>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface-canvas border border-border-subtle rounded-xl p-lg hover:shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300">
+<h2 class="font-card-title text-card-title text-text-primary mb-sm">L3 公有云</h2>
+<div class="inline-flex items-center px-sm py-xs bg-surface-soft rounded-full text-text-secondary font-meta-data text-meta-data mb-md">
+                        全球 SOTA 模型强化逻辑，脱敏回传
+                    </div>
+<p class="font-body-main text-body-main text-text-secondary">
+                        利用公有云强大的计算能力，仅处理脱敏后的碎片化数据，强化逻辑后安全回传。
+                    </p>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 font-sans text-xs full-width py-12 border-t border-zinc-100 dark:border-zinc-800 mt-[500px]">
+<div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+<div>
+<div class="font-bold text-zinc-900 dark:text-zinc-50 mb-sm">OpenAI</div>
+<div class="text-zinc-500 dark:text-zinc-400">© 2024 OpenAI</div>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2 md:justify-end">
+<a class="text-zinc-500 dark:text-zinc-400 hover:underline transition-all" href="#">Research</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:underline transition-all" href="#">Products</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:underline transition-all" href="#">Safety</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:underline transition-all" href="#">Company</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:underline transition-all" href="#">Terms</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:underline transition-all" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

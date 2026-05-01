@@ -58,9 +58,9 @@ function MedicalAgentOS() {
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-square bg-white rounded-3xl p-0 flex items-center justify-center">
+                <a href="/引擎.html" className="aspect-square bg-white rounded-3xl p-0 flex items-center justify-center block cursor-pointer hover:shadow-xl transition-shadow">
                   <img src="/新范式6.png" alt="迈向医疗智能的新范式" className="w-full h-full object-cover rounded-2xl" />
-                </div>
+                </a>
               </div>
             </div>
           </div>
