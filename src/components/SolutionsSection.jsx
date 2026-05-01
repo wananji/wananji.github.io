@@ -13,7 +13,8 @@ function SolutionsSection() {
     {
       title: "VKA资产化引擎",
       description: "深度学习研究的前沿阵地，探索无限可能。",
-      image: "/image4.jpg"
+      image: "/image4.jpg",
+      link: "/tongren"
     },
     {
       title: "GEO 增长引擎",

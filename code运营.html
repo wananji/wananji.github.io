@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-background": "#1c1b1b",
+                        "surface-container-high": "#ebe7e6",
+                        "primary-container": "#1c1b1b",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "surface-soft": "#F5F5F5",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#ddd9d8",
+                        "inverse-primary": "#c9c6c5",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-surface": "#1c1b1b",
+                        "tertiary-container": "#1d1b1a",
+                        "background": "#fdf8f8",
+                        "on-secondary-fixed": "#002117",
+                        "on-tertiary-container": "#868381",
+                        "inverse-surface": "#313030",
+                        "on-primary-container": "#858383",
+                        "surface-container": "#f1edec",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-container": "#007056",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#747878",
+                        "text-secondary": "#6B6B6B",
+                        "secondary-fixed-dim": "#61dbb4",
+                        "text-tertiary": "#9E9E9E",
+                        "surface-container-low": "#f7f3f2",
+                        "text-primary": "#1A1A1A",
+                        "tertiary": "#000000",
+                        "primary": "#000000",
+                        "on-tertiary-fixed": "#1d1b1a",
+                        "surface-canvas": "#FFFFFF",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#cac6c3",
+                        "on-primary-fixed-variant": "#474646",
+                        "outline-variant": "#c4c7c7",
+                        "surface": "#fdf8f8",
+                        "border-subtle": "#E8E8E8",
+                        "secondary-container": "#7cf5cc",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed": "#7ff8cf",
+                        "on-surface-variant": "#444748",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e6e1df",
+                        "on-secondary-fixed-variant": "#00513d",
+                        "surface-bright": "#fdf8f8",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#006c52"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "base": "8px",
+                        "xl": "48px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "container-max": "1200px",
+                        "lg": "32px"
+                    },
+                    "fontFamily": {
+                        "meta-data": ["Inter"],
+                        "section-title": ["Inter"],
+                        "body-main": ["Inter"],
+                        "hero-title": ["Inter"],
+                        "nav-item": ["Inter"],
+                        "card-title": ["Inter"]
+                    },
+                    "fontSize": {
+                        "meta-data": ["13px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "section-title": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-main": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "hero-title": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "nav-item": ["14px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                        "card-title": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid #E8E8E8; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="bg-surface-canvas text-on-background">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 border-b bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-zinc-100 dark:border-zinc-800 h-16">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between px-6 h-full">
+<div class="text-lg font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 font-nav-item">
+                Expert IP
+            </div>
+<div class="hidden md:flex items-center gap-8"><a class="text-sm font-medium text-zinc-900 dark:text-zinc-50 transition-colors duration-200" href="#">专业领域</a><a class="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-200" href="#">挑战</a><a class="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-200" href="#">解决方案</a><a class="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-200" href="#">价格</a></div>
+<div class="flex items-center gap-4">
+<button class="text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors">登录</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 active:scale-95 transition-all">立即开始</button>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-24 pb-32">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-3xl -mr-96 -mt-96"></div>
+<div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-zinc-50/80 rounded-full blur-3xl -ml-64 -mb-64"></div>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
+<h1 class="font-hero-title text-hero-title mb-8 max-w-4xl mx-auto">名医 IP 数字化运营<div class="bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] bg-clip-text text-transparent inline-block">从人力密集到数字资产的跃迁</div></h1>
+<p class="font-body-main text-body-main text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">我们正在重新定义医疗服务范式。通过利用先进的临床逻辑 AI，我们将专家经验转化为永久性的数字资产，超越传统的劳动力依赖模型。</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-medium text-sm hover:opacity-90 transition-all">开始免费体验</button>
+</div>
+</div>
+<div class="mt-20 max-w-[1000px] mx-auto px-6">
+<div class="rounded-xl border border-border-subtle overflow-hidden shadow-sm bg-white">
+<img alt="Hero Technical Interface" class="w-full h-auto object-cover" data-alt="A macro close-up of a high-tech medical data visualization interface. The design features minimalist wireframes of human anatomy, flowing translucent data streams in clinical blues and soft whites, and precise typographic labels. The lighting is clean and high-key, reflecting a professional laboratory setting. The overall aesthetic is pure tech, emphasizing clarity and intellectual rigor through white space and subtle geometric patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYCaNlwAxxXHuHjjKj40oVXJ27CJQB9EeMM66JblT4jHhGlJhwXM7-b0Rrfh9ByGS80AZ6AWWVOBkMGA0EpX_Lttwerz5GKdJ6NoEKSDg2LQGjHmP0ImdTjDipQy7sl900KnCnbJXMTAPuj6ZbnEjL8FkNCoCGJtHjDGDSyP369DVO91NpVOIpAoRlpOuBjwsPfjMmKQhmXS9rNFFH3qbg4aJge3RRW6bFQKyaRJmGyPjPJFm-WTiM4f0nCwm0NhdjxxQ_BjgtwNWt"/>
+</div>
+</div>
+</section>
+<!-- Pain Points Section -->
+<section class="py-24 bg-surface-soft">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-section-title text-section-title mb-4">三大运营痛点</h2>
+<p class="text-text-secondary">传统医疗服务模式面临固有的可扩展性限制</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Energy Limits -->
+<div class="bg-white p-10 rounded-xl border border-border-subtle hover-lift">
+<h3 class="font-card-title text-card-title mb-4">名医精力瓶颈</h3>
+<p class="text-text-secondary text-sm leading-relaxed">专家时间是不可再生的。每次咨询都会消耗宝贵的临床精力，如果不降低质量或导致精疲力竭，就不可能服务成千上万的人。</p>
+</div>
+<!-- Knowledge Barrier -->
+<div class="bg-white p-10 rounded-xl border border-border-subtle hover-lift">
+<h3 class="font-card-title text-card-title mb-4">知识迁移鸿沟</h3>
+<p class="text-text-secondary text-sm leading-relaxed">临床经验往往是含蓄的。将这种“直觉”转移给初级团队或内容创作者通常会导致高度的信息损失和品牌风险。</p>
+</div>
+<!-- Fragmentation -->
+<div class="bg-white p-10 rounded-xl border border-border-subtle hover-lift">
+<h3 class="font-card-title text-card-title mb-4">碎裂化管理</h3>
+<p class="text-text-secondary text-sm leading-relaxed">跨社交媒体、私域流量和诊所的患者触点是支离破碎的，导致留存率低且缺乏系统的临床数据逻辑。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Logic Section -->
+<section class="py-32">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1">
+<h2 class="font-section-title text-section-title mb-6">EvoLeap 核心逻辑：<br/>隐性经验硬化</h2>
+<p class="text-text-secondary mb-8 leading-relaxed">EvoLeap 的核心是“经验固化”。我们不仅仅是记录会诊；我们提取顶级专家的底层临床逻辑树，并将其编码到 AI 引擎中。</p>
+<ul class="space-y-4"><li class="flex items-center gap-3 text-sm font-medium"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>将专家直觉转化为可重复的临床路径</li><li class="flex items-center gap-3 text-sm font-medium"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>标准化诊断逻辑，确保多渠道一致性</li><li class="flex items-center gap-3 text-sm font-medium"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>通过真实世界的医疗数据反馈不断进化</li></ul>
+</div>
+<div class="flex-1 relative">
+<div class="rounded-xl border border-border-subtle overflow-hidden bg-zinc-900 aspect-video">
+<img alt="Logic Extraction Visualization" class="w-full h-full object-cover opacity-80" data-alt="A sophisticated abstract visualization representing clinical logic and data architecture. Interconnected crystalline nodes and glowing neural networks form a complex logic tree structure against a deep charcoal background. Thin, luminous lines of teal and white connect data points, suggesting the transformation of human thought into digital precision. The scene is lit with cinematic low-key lighting, emphasizing a high-tech, intellectual atmosphere of data solidification." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBueFXt93HPhIS6P8tLK7c2PiWnE7mgM_3tVflIWg0mljyOX7y6g85zG3YhOVgffawqgH76A6K5wbVlMrtGpCWvp996Kdw7TO6cMIyV8HZT9xKe3uc5kBtJmDDLhgXm3y26hsio4wYy6Ss_tnt5hyM2rhKpfNwuHqBL_s-K2nyfdscuYKqjmJIDLJ4_08Hm1Zw-rcY8jBPumOEIY9ZXPLdRM7lP5XWoKu5oF7Ic27q2AWQkxOtBv1AF1lFbpiUE-qrwVksRSwYV1AdF"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl border border-border-subtle max-w-[240px]">
+<p class="text-xs text-text-tertiary uppercase tracking-widest mb-1">逻辑准确率</p>
+<p class="text-2xl font-bold">99.8%</p>
+<div class="w-full h-1 bg-surface-container mt-2 rounded-full overflow-hidden">
+<div class="w-4/5 h-full bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Enablement Matrices -->
+<section class="py-24 bg-surface-soft">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-section-title text-section-title mb-4">四大赋能矩阵</h2>
+<p class="text-text-secondary">现代医疗 IP 的全方位数字赋能</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group bg-white p-8 rounded-xl border border-border-subtle hover:border-primary transition-colors">
+<h4 class="font-card-title text-card-title mb-4 group-hover:text-primary transition-colors">GEO品牌增长矩阵</h4>
+<p class="text-sm text-text-secondary mb-6">基于专家逻辑在所有社交平台上自动生成内容。</p>
+<img alt="Brand Matrix" class="w-full h-32 object-cover rounded-lg" data-alt="A minimalist UI dashboard design showcasing social media reach and brand sentiment analytics. Clean white background with subtle gray line graphs, sleek sans-serif typography, and a refined color palette of clinical blue and slate gray. The lighting is even and professional, conveying a sense of transparency and growth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPJpU74O3jRKZy4oLUITNUX2pg3lAzEBeatI86wRF34AzT0mVqvdkybMPkyNOpa9BR8O16NlWijyvtqJ9nfUkKdLh3fORrmwjGTJ2QqdJTpWS469qsKNzt3uhp3qZoNPNqfqOtcKQkRQOLsUWRaRgTRQ4qnlQ-uZnRAR4HIFxxi9JPDSxhaicVk_Fvxy8breIvbozAptO0rnGM2M-cjZTFFqC-t8Lfpa2af4JkcbLVBxCwjdUdRB0V99hWQdNJuFvqUtCl509AU6GB"/>
+</div>
+<div class="group bg-white p-8 rounded-xl border border-border-subtle hover:border-primary transition-colors">
+<h4 class="font-card-title text-card-title mb-4 group-hover:text-primary transition-colors">数字人智慧诊室矩阵</h4>
+<p class="text-sm text-text-secondary mb-6">AI 数字人驱动的患者分诊和自动随访，确保高质量的问诊服务。</p>
+<img alt="Clinic Matrix" class="w-full h-32 object-cover rounded-lg" data-alt="A futuristic medical office setting, highly minimalist and clean. A glowing holographic patient record display sits above a sleek white workstation. The lighting is soft and airy, creating a calm, high-tech clinical environment. The style is ultra-modern, focusing on the seamless integration of AI in healthcare spaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTwNWpGpAarV5aFc-bPWWkTek5AThiBn9IwIJBwIxQeMCMsyRx-cvq1h6Pi58iE755az2e_VC_KW2f_2p3_kFq1tINZUobdMyUAMV-JY-jR-ORYVupb1c0Jw_oBg7Rt8l6F-wzhGgc9qumwVjxvyEGh1tRrldQFcgWDMKpS9NlNhKk51stXbUT9CZDpXOlUAVVUOEgcpMruv5VQnoEODaLPaWfvq-fDBRjUOQXHBMp82UsAiK9uF6iqydfoVLmFfp5BYrqr6ct5aY8"/>
+</div>
+<div class="group bg-white p-8 rounded-xl border border-border-subtle hover:border-primary transition-colors">
+<h4 class="font-card-title text-card-title mb-4 group-hover:text-primary transition-colors">内容产品矩阵</h4>
+<p class="text-sm text-text-secondary mb-6">临床数据的自动结构化，实现无缝的内容产出与增长。</p>
+<img alt="Research Matrix" class="w-full h-32 object-cover rounded-lg" data-alt="A visualization of structured medical data. Microscopic views of data molecules and interlocking hexagonal grids against a clinical white and light gray background. The lighting is bright and scientific, suggesting discovery and academic rigor. The aesthetic is extremely clean and organized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB11bmNs-76EyD2mDPMdh05PUYTD6QCr57gEddfjvj8NyBrYI0U1mvyoUExTXv_nvogMei_O4jSCupoCG1oiE7JgQcXSzvPKMV2UBK4Defc6FcqXgPNSS3OTouZNafd7FFX6se0VUQGwhO_XUM-op-vXsJSDYv0484XxaOPaMsTPh06pVIMT7VJiUt6ocEyMrfwdF9iAz7c80MJuqT3GBbInmbFaZIM-sya0qCVCvdH0NycB-eyyQBRetnh-9MFRSi7vuxAFiISYezw"/>
+</div>
+<div class="group bg-white p-8 rounded-xl border border-border-subtle hover:border-primary transition-colors">
+<h4 class="font-card-title text-card-title mb-4 group-hover:text-primary transition-colors">资产管理矩阵</h4>
+<p class="text-sm text-text-secondary mb-6">将咨询记录转化为受保护且可交易的数字知识产权。</p>
+<img alt="Asset Matrix" class="w-full h-32 object-cover rounded-lg" data-alt="A metaphorical representation of digital medical assets. Translucent glass cubes containing glowing medical symbols, neatly stacked in a vast white virtual gallery. The lighting features soft shadows and high-key brightness, representing security, value, and clarity in digital asset management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ju0fcV4akzxwf7Qn5PY4nOC2Vg30Rfa_pErNquihc6IqSxXnd-eTNKMc2KhjHFpcUJfLNiUifXl3PsJMX-ztLvs_-Q_wLnF12HK6QAI7LVKrRZW6-ijZjcvjvCR09ZBUZWg-keiqMu5SgSn-7QmVpa47AnZIrDhQbumizpBeJS6CDruLvacL1OcwucXz3IBmIiDM9bXZyw0DyPM7jgNkg-Kw4PO2ZGVZmjiTPuznyhJIZHG65NAvrYPJfGMy5i9EsT1pJTHlGb1d"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Metrics -->
+<section class="py-24 border-b border-border-subtle">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="font-section-title text-section-title mb-4">运营成效显著提升</h2>
+<p class="text-text-secondary">临床生产力的量化转型</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12 text-center">
+<div><p class="text-xs text-text-tertiary uppercase tracking-widest mb-2">服务能力</p><h3 class="text-6xl font-bold mb-4 tracking-tighter">10倍</h3><p class="text-sm text-text-secondary">同时患者管理能力的增长</p></div>
+<div class="border-x border-border-subtle px-6"><p class="text-xs text-text-tertiary uppercase tracking-widest mb-2">患者留存</p><h3 class="text-6xl font-bold mb-4 tracking-tighter">45%</h3><p class="text-sm text-text-secondary">长期治疗依从性和留存率的提升</p></div>
+<div><p class="text-xs text-text-tertiary uppercase tracking-widest mb-2">品牌价值</p><h3 class="text-6xl font-bold mb-4 tracking-tighter">300%</h3><p class="text-sm text-text-secondary">品牌影响力和患者信任指标的提升</p></div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 px-6 bg-surface-canvas">
+<div class="max-w-[1200px] mx-auto">
+<div class="relative overflow-hidden bg-zinc-950 rounded-3xl p-12 md:p-20 text-center">
+<!-- Background Effect -->
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -mr-96 -mt-96"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[100px] -ml-64 -mb-64"></div>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">开启您的医疗 AI 进化之旅</h2>
+<p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                    选择适合的版本，即刻部署 Medical Agent OS 2.0，将医疗服务转化为领先的数字资产。
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-zinc-200 transition-all">
+                        试用 EvoLeap
+                    </button>
+<button class="w-full sm:w-auto px-8 py-4 border border-zinc-700 text-white rounded-full font-semibold hover:bg-white/10 transition-all">
+                        联系 Enterprise 销售
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 dark:bg-zinc-900 py-12 border-t border-zinc-100 dark:border-zinc-800">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-meta-data text-meta-data text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">© 2024 名医 IP 操作系统。保留所有权利。</div>
+<div class="flex flex-wrap justify-center gap-8"><a class="font-meta-data text-meta-data text-zinc-400 dark:text-zinc-500 uppercase tracking-widest hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">隐私政策</a><a class="font-meta-data text-meta-data text-zinc-400 dark:text-zinc-500 uppercase tracking-widest hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">服务条款</a><a class="font-meta-data text-meta-data text-zinc-400 dark:text-zinc-500 uppercase tracking-widest hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">研究</a><a class="font-meta-data text-meta-data text-zinc-400 dark:text-zinc-500 uppercase tracking-widest hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">文档</a></div>
+</div>
+</footer>
+</body></html>

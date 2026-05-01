@@ -7,6 +7,7 @@ import SearchSection from './components/SearchSection'
 import FooterCTA from './components/FooterCTA'
 import Footer from './components/Footer'
 import MedicalAgentOS from './components/MedicalAgentOS'
+import TongRen from './components/TongRen'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         </div>
       } />
       <Route path="/medical-agent-os" element={<MedicalAgentOS />} />
+      <Route path="/tongren" element={<TongRen />} />
     </Routes>
   )
 }
