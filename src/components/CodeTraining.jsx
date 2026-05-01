@@ -265,8 +265,8 @@ function CodeTraining() {
                 <button className="bg-on-primary text-primary font-nav-item px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all">
                   联系我们定制培训方案
                 </button>
-                <button className="border border-on-primary/30 text-on-primary font-nav-item px-8 py-4 rounded-full font-semibold hover:bg-on-primary/10 transition-all">
-                  联系 Enterprise 销售
+                <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all">
+                  联系 EvoLeap 销售
                 </button>
               </div>
             </div>

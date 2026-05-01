@@ -20,6 +20,13 @@ function BeijingStomatology() {
           </h1>
         </section>
 
+        {/* Full-Width Image */}
+        <section className="mb-xl">
+          <div className="w-full aspect-video rounded-xl overflow-hidden bg-zinc-100">
+            <img alt="口腔医院新闻照片" className="w-full h-full object-cover" src="/口腔医院新闻照片.png"/>
+          </div>
+        </section>
+
         {/* Metadata Bar */}
         <section className="py-lg border-y border-border-subtle grid grid-cols-2 md:grid-cols-4 gap-md mb-xl">
           <div className="flex flex-col gap-xs">
@@ -130,22 +137,20 @@ function BeijingStomatology() {
           </div>
         </section>
 
-        {/* Full-Width Image */}
-        <section className="mb-xl">
-          <div className="w-full aspect-video rounded-xl overflow-hidden bg-zinc-100">
-            <img alt="口腔医院新闻照片" className="w-full h-full object-cover" src="/口腔医院新闻照片.png"/>
-          </div>
-        </section>
-
         {/* CTA Banner */}
-        <section className="py-xl px-lg bg-surface-soft rounded-xl mb-xl text-center flex flex-col items-center gap-md">
-          <h2 className="font-section-title text-section-title text-text-primary">开启您的医疗 AI 进化之旅</h2>
-          <p className="font-body-main text-body-main text-text-secondary max-w-2xl">
-            加入数百家顶尖医疗机构，利用 EvoLeap AI 的智能体技术重塑您的临床工作流。
-          </p>
-          <button className="bg-primary text-on-primary px-lg py-sm rounded-full font-nav-item text-nav-item hover:shadow-lg transition-all">
-            试用 EvoLeap
-          </button>
+        <section className="py-xl px-lg rounded-xl mb-xl text-center flex flex-col items-center gap-md relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src="/抽象.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="relative z-10">
+            <h2 className="font-section-title text-section-title text-white">开启您的医疗 AI 进化之旅</h2>
+            <p className="font-body-main text-body-main text-white/90 max-w-2xl">
+              加入数百家顶尖医疗机构，利用 EvoLeap AI 的智能体技术重塑您的临床工作流。
+            </p>
+            <button className="bg-white text-primary px-lg py-sm rounded-full font-nav-item text-nav-item hover:shadow-lg transition-all">
+              试用 EvoLeap
+            </button>
+          </div>
         </section>
       </main>
 

@@ -143,20 +143,21 @@ function CodeOperation() {
         {/* Final CTA Section */}
         <section className="py-24 px-6 bg-surface-canvas">
           <div className="max-w-[1200px] mx-auto">
-            <div className="relative overflow-hidden bg-zinc-950 rounded-3xl p-12 md:p-20 text-center">
-              <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -mr-96 -mt-96"></div>
-              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[100px] -ml-64 -mb-64"></div>
+            <div className="relative overflow-hidden rounded-3xl p-12 md:p-20 text-center">
+              <div className="absolute inset-0 z-0">
+                <img src="/抽象图块6.jpg" alt="" className="w-full h-full object-cover" />
+              </div>
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">开启您的医疗 AI 进化之旅</h2>
-                <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
                   选择适合的版本，即刻部署 Medical Agent OS 2.0，将医疗服务转化为领先的数字资产。
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button className="w-full sm:w-auto px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-zinc-200 transition-all">
                     试用 EvoLeap
                   </button>
-                  <button className="w-full sm:w-auto px-8 py-4 border border-zinc-700 text-white rounded-full font-semibold hover:bg-white/10 transition-all">
-                    联系 Enterprise 销售
+                  <button className="w-full sm:w-auto px-10 py-5 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-full font-bold hover:bg-white/20 transition-all">
+                    联系 EvoLeap 销售
                   </button>
                 </div>
               </div>

@@ -1,0 +1,222 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EvoLeap AI - Dual Engine Model</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#474646",
+                      "on-background": "#1c1b1b",
+                      "gradient-blue": "linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%)",
+                      "on-error-container": "#93000a",
+                      "border-subtle": "#E8E8E8",
+                      "text-tertiary": "#9E9E9E",
+                      "surface-container": "#f1edec",
+                      "on-tertiary-fixed-variant": "#484645",
+                      "surface-bright": "#fdf8f8",
+                      "text-secondary": "#6B6B6B",
+                      "surface-soft": "#F5F5F5",
+                      "inverse-primary": "#c9c6c5",
+                      "on-tertiary": "#ffffff",
+                      "gradient-teal": "linear-gradient(135deg, #0D9488 0%, #34D399 100%)",
+                      "primary": "#000000",
+                      "error-container": "#ffdad6",
+                      "surface": "#fdf8f8",
+                      "on-primary-fixed": "#1c1b1b",
+                      "secondary-container": "#7cf5cc",
+                      "on-primary-container": "#858383",
+                      "surface-tint": "#5f5e5e",
+                      "surface-container-high": "#ebe7e6",
+                      "surface-variant": "#e5e2e1",
+                      "outline": "#747878",
+                      "text-primary": "#1A1A1A",
+                      "secondary-fixed-dim": "#61dbb4",
+                      "inverse-surface": "#313030",
+                      "gradient-rose": "linear-gradient(135deg, #FF85B1 0%, #FFE4B2 100%)",
+                      "surface-canvas": "#FFFFFF",
+                      "on-tertiary-container": "#868381",
+                      "tertiary-fixed": "#e6e1df",
+                      "primary-fixed": "#e5e2e1",
+                      "on-tertiary-fixed": "#1d1b1a",
+                      "gradient-purple": "linear-gradient(135deg, #C4B5FD 0%, #93C5FD 100%)",
+                      "on-surface-variant": "#444748",
+                      "inverse-on-surface": "#f4f0ef",
+                      "gradient-green": "linear-gradient(135deg, #22C55E 0%, #86EFAC 100%)",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-container": "#1c1b1b",
+                      "tertiary": "#000000",
+                      "on-secondary-fixed-variant": "#00513d",
+                      "surface-container-highest": "#e5e2e1",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#c4c7c7",
+                      "on-surface": "#1c1b1b",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed": "#002117",
+                      "surface-dim": "#ddd9d8",
+                      "tertiary-container": "#1d1b1a",
+                      "on-secondary": "#ffffff",
+                      "secondary": "#006c52",
+                      "gradient-orange": "linear-gradient(135deg, #F97316 0%, #FDE68A 100%)",
+                      "secondary-fixed": "#7ff8cf",
+                      "background": "#fdf8f8",
+                      "surface-container-low": "#f7f3f2",
+                      "on-error": "#ffffff",
+                      "on-secondary-container": "#007056",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#cac6c3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "16px",
+                      "xl": "48px",
+                      "xs": "8px",
+                      "container-max": "1200px",
+                      "lg": "32px",
+                      "base": "8px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "hero-title": [
+                              "Inter"
+                      ],
+                      "body-main": [
+                              "Inter"
+                      ],
+                      "meta-data": [
+                              "Inter"
+                      ],
+                      "card-title": [
+                              "Inter"
+                      ],
+                      "section-title": [
+                              "Inter"
+                      ],
+                      "nav-item": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "hero-title": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-main": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "meta-data": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "card-title": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "section-title": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "nav-item": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+      </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 antialiased font-body-main text-body-main bg-white">
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity"></div>
+<!-- Modal Container -->
+<div class="relative z-50 w-full max-w-4xl bg-surface-canvas rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-border-subtle overflow-hidden flex flex-col">
+<!-- Header -->
+<div class="flex justify-between items-start p-md md:p-lg border-b border-border-subtle">
+<div>
+<p class="font-meta-data text-meta-data text-text-secondary uppercase tracking-widest mb-xs"><br></p>
+<h1 class="font-section-title text-section-title text-primary tracking-tight">Base + RaaS 双引擎模式</h1>
+<p class="font-body-main text-body-main text-text-secondary mt-sm max-w-2xl">底座收费 + RaaS 分成，确保任何科室合作都在第一个月内实现正向 ROI</p>
+</div>
+</div>
+<!-- Content Body -->
+<div class="p-md md:p-lg grid grid-cols-1 md:grid-cols-2 gap-lg bg-surface-soft/30">
+<!-- Card 1: Base Fee -->
+<div class="bg-surface-canvas border border-border-subtle rounded-lg p-md hover:shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="dns">dns</span>
+</div>
+<div>
+<h2 class="font-card-title text-card-title text-primary">基座费用</h2>
+<p class="font-meta-data text-meta-data text-text-secondary">免费</p>
+</div>
+</div>
+<p class="font-body-main text-body-main text-text-primary mb-md pb-md border-b border-border-subtle"><p data-pm-slice="1 1 []" class="">硬件部署 + AI 系统 + 基础运营服务</p></p>
+<ul class="space-y-sm"><li class="flex items-start gap-xs font-body-main text-body-main text-text-secondary"><span class="material-symbols-outlined text-[18px] text-text-tertiary mt-0.5">check_circle</span>Medical Agent OS<div>2.0系统</div></li><li class="flex items-start gap-xs font-body-main text-body-main text-text-secondary"><span class="material-symbols-outlined text-[18px] text-text-tertiary mt-0.5">check_circle</span>服务器硬件上门部署</li><li class="flex items-start gap-xs font-body-main text-body-main text-text-secondary"><span class="material-symbols-outlined text-[18px] text-text-tertiary mt-0.5">check_circle</span>IP试运营服务</li></ul>
+</div>
+<!-- Card 2: RaaS Share -->
+<div class="bg-surface-canvas border border-border-subtle rounded-lg p-md hover:shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden">
+<!-- Subtle Gradient Accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-blue opacity-5 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center gap-sm mb-md relative z-10">
+<div class="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<div>
+<h2 class="font-card-title text-card-title text-primary">RaaS 分成</h2>
+<p class="font-meta-data text-meta-data text-text-secondary">8%-28% 增量</p>
+</div>
+</div>
+<p class="font-body-main text-body-main text-text-primary mb-md pb-md border-b border-border-subtle relative z-10">基于 AI 带来的超额增量收益分成</p>
+<ul class="space-y-sm relative z-10"><li class="flex items-start gap-xs font-body-main text-body-main text-text-secondary"><span class="material-symbols-outlined text-[18px] text-text-tertiary mt-0.5">check_circle</span>仅对 AI 带来的增量部分分成</li><li class="flex items-start gap-xs font-body-main text-body-main text-text-secondary"><span class="material-symbols-outlined text-[18px] text-text-tertiary mt-0.5">check_circle</span>存量业务 100% 保护</li><li class="flex items-start gap-xs font-body-main text-body-main text-text-secondary"><span class="material-symbols-outlined text-[18px] text-text-tertiary mt-0.5">check_circle</span>阶梯式分成机制</li></ul>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="p-md md:p-lg border-t border-border-subtle bg-surface-canvas flex justify-end">
+<button class="bg-primary text-on-primary px-lg py-3 rounded-md font-nav-item text-nav-item hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 flex items-center gap-2">预约咨询 <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+
+
+</body></html>

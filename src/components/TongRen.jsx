@@ -141,7 +141,7 @@ function TongRen() {
                 </div>
                 <div className="group border border-border-subtle p-8 rounded-xl hover:bg-zinc-50 transition-colors">
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/1a8ff1b0e6ae83467713ffc14ff163d4.jpg" alt="专家 IP 数字孪生" className="w-6 h-6 object-cover rounded" />
+                    <span className="material-symbols-outlined text-zinc-900" style={{fontVariationSettings: '"FILL" 1'}}>person</span>
                     <h3 className="font-card-title text-card-title text-text-primary">专家 IP 数字孪生</h3>
                   </div>
                   <p className="text-text-secondary font-body-main">通过多轮对话与临床案例学习，构建顶级专家的"数字分身"，模拟其判读逻辑提供辅助建议，确保标注标准的高一致性。</p>
@@ -196,6 +196,22 @@ function TongRen() {
             </section>
           </div>
         </div>
+
+        {/* CTA Banner */}
+        <section className="py-xl px-lg rounded-xl mb-xl mt-24 text-center flex flex-col items-center gap-md relative overflow-hidden max-w-[1200px] mx-auto">
+          <div className="absolute inset-0 z-0">
+            <img src="/抽象7.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="relative z-10">
+            <h2 className="font-section-title text-section-title text-white">开启您的医疗 AI 进化之旅</h2>
+            <p className="font-body-main text-body-main text-white/90 max-w-2xl">
+              加入数百家顶尖医疗机构，利用 EvoLeap AI 的智能体技术重塑您的临床工作流。
+            </p>
+            <button className="bg-white text-primary px-lg py-sm rounded-full font-nav-item text-nav-item hover:shadow-lg transition-all">
+              试用 EvoLeap
+            </button>
+          </div>
+        </section>
       </main>
 
       <Footer />

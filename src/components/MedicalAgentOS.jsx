@@ -153,14 +153,12 @@ function MedicalAgentOS() {
               {/* Marketing Matrix */}
               <div className="col-span-12 md:col-span-6 bg-white/70 backdrop-blur-sm border border-border-subtle p-8 rounded-3xl group hover:-translate-y-0.5 transition-all">
                 <h3 className="text-card-title font-card-title mb-3">营销管理矩阵</h3>
-                <p className="text-text-secondary text-sm mb-6">名医 IP 数字人 + GEO 内容工厂、流量投流优化、意向锁定智能体</p>
-                <img className="w-full h-40 object-cover rounded-xl border border-border-subtle opacity-80 group-hover:opacity-100 transition-opacity" alt="Marketing matrix visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Ck2ys4Gkk19H544d3fDocf6wKrC8epxD1piz7vCnyMxzai4PM-DlsFdc6XPVlMNGb5md2HOqLUmqp5y-3BomSY3Uf4fPPV3cZX43jjd9scxX8WvffbxNtlc19PjCnR4wVgQ0qB22qoT8pzDsZoAoDINp9Vkoiul8SNynyQc12XUqmlbiKKKWErzQM0l5xSbPri_15V6UkRK3nJISvdqr2XHuItite4XK8yV8Q-1o7QjtAt2508YW8iJiY1NP2F0qtxD1b32nkEXv" />
+                <p className="text-text-secondary text-sm">名医 IP 数字人 + GEO 内容工厂、流量投流优化、意向锁定智能体</p>
               </div>
               {/* Service Matrix */}
               <div className="col-span-12 md:col-span-6 bg-white/70 backdrop-blur-sm border border-border-subtle p-8 rounded-3xl group hover:-translate-y-0.5 transition-all">
                 <h3 className="text-card-title font-card-title mb-3">医疗服务矩阵</h3>
-                <p className="text-text-secondary text-sm mb-6">专家临床助手、智能分诊排班</p>
-                <img className="w-full h-40 object-cover rounded-xl border border-border-subtle opacity-80 group-hover:opacity-100 transition-opacity" alt="Service matrix visualization" src="https://lh3.googleusercontent.com/aida-public/AB6DXuAOfl7SOSPAi5qTj4UvuB8EfXC1_XmRdgCoTLTekQhvF6S2L0Z84bIbFvFCZSPOWKr4iBkhsZuJNhl_WHWPEhMKNZekZ3EM4xnfuev0niaBVB6nhVwc1OyWtDOQeX2GVDj51zAcCfoeqJXGx--VWBdxEcKaJFjZA7blbrUIt1pxXuka9oHufvs7bBBA1vLDRTAX-PNeOanGV3xDol2vFWFMwXe8tAHmkt_4mPm5koLjDkzWsnSwv8e4wUTTpbQF9exN2MIORKnjMYTV" />
+                <p className="text-text-secondary text-sm">专家临床助手、智能分诊排班</p>
               </div>
               {/* Compliance Matrix */}
               <div className="col-span-12 md:col-span-4 bg-white/70 backdrop-blur-sm border border-border-subtle p-8 rounded-3xl">
@@ -169,12 +167,9 @@ function MedicalAgentOS() {
               </div>
               {/* Digital Asset Matrix */}
               <div className="col-span-12 md:col-span-8 bg-zinc-900 text-white p-8 rounded-3xl">
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white">数字资产矩阵</h3>
-                    <p className="text-zinc-400 text-sm">将隐性专家经验转化为可流转的数字化智能体资产，实现机构知识的永续传承与指数级扩张。</p>
-                  </div>
-                  <div className="hidden md:block w-48 h-48 bg-gradient-to-br from-blue-500/20 to-teal-500/20 rounded-full blur-3xl"></div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-3 text-white">数字资产矩阵</h3>
+                  <p className="text-zinc-400 text-sm">将隐性专家经验转化为可流转的数字化智能体资产，实现机构知识的永续传承与指数级扩张。</p>
                 </div>
               </div>
             </div>
@@ -203,7 +198,7 @@ function MedicalAgentOS() {
                   </div>
                 </div>
                 <div className="flex-1 w-full">
-                  <img className="w-full h-[400px] object-cover rounded-3xl shadow-xl" alt="Developer coding medical AI" src="https://lh3.googleusercontent.com/aida-public/AB6DXuBjPMIniXRMh3K_aGCzyctnYZmiIqOUmFTzcwh3917K9vaYaYBzcP3ENCwc21ft4kg-te0xMQ04kW3TGF80dCnAJSf42J1Z3AhLXugZoyLULb8nTgEhtElDmqf80Ah_3Fhaf_Xxq1kZfJtJgCsdjPX0JIt42F09Ki0aaCSetLpxey8KT2xgtPJk4dSLRQO9k0LZnnssUyI06KWoXGNuJiH66P8Alyq6wPJu9iGH9VjIR7lOqpHXAxKFNDCDKw7KKxqJoFfx11158tbB" />
+                  <img className="w-full h-[400px] object-cover rounded-3xl shadow-xl" alt="门诊大夫办公" src="/门诊大夫办公新闻照片.png" />
                 </div>
               </div>
               {/* Scenario 2 */}
@@ -220,7 +215,7 @@ function MedicalAgentOS() {
                   </div>
                 </div>
                 <div className="flex-1 w-full">
-                  <img className="w-full h-[400px] object-cover rounded-3xl shadow-xl" alt="Mental health monitoring" src="https://lh3.googleusercontent.com/aida-public/AB6DXuA8jzDsQh3m3J8_fuUXTQKCeGsqGI3xuhZzW1SN6rwAoRy5wmnRDN31soJbLeXN-kUGL9atdJJt3A5o0DQd24rRCoKn-NPH03MqZRrvW-2xdiysd4nOa5IDvOw7K7Fjd_mujl3-SUU1trE7VOD1S-VF7RIIuTcmOyY5kGIqsUqOf-o9VzHt6wSh6g8DqGfHQJ2ruvOqRi6z4QSDbAKrFmUl7ollLx6MuKbLJiE8M1yM6dQooyv9PKqD81q8tawmOQn64vGIlnTHOwUA" />
+                  <img className="w-full h-[400px] object-cover rounded-3xl shadow-xl" alt="Mental health monitoring" src="/儿童.png" />
                 </div>
               </div>
               {/* Scenario 3 */}
@@ -237,7 +232,7 @@ function MedicalAgentOS() {
                   </div>
                 </div>
                 <div className="flex-1 w-full">
-                  <img className="w-full h-[400px] object-cover rounded-3xl shadow-xl" alt="Traditional Chinese medicine digital" src="https://lh3.googleusercontent.com/aida-public/AB6DXuAiOuUtWVE5liFbm0xR1fbIF0amI21byIITbSej_bMCHsUp7l4_lhBsh0BFgek3KxRGD751pbmxdEbTzJGjnqp4EWiEy7BdpWu2nZDD54XTdUkCrcW-vxBs4G39hDQOD5GRrxv2w5a4hCcvsI3zsLnrgUxWfGRuZY3l_n1YKyTs_9zUU7PnPi2zC1DLHH7HibfQ56nQsaQIoNxYLFYokPlE2OoqDXWylWwABkH58aH4x_4p_-nXfyPYzRoDjBoBGd62K_tcCTWsrGGI" />
+                  <img className="w-full h-[400px] object-cover rounded-3xl shadow-xl object-right" alt="中医大夫抓药" src="/中医大夫抓药新闻照片.png" />
                 </div>
               </div>
             </div>
@@ -247,14 +242,16 @@ function MedicalAgentOS() {
         {/* CTA Section */}
         <section className="py-24 bg-white relative">
           <div className="max-w-[1200px] mx-auto px-6">
-            <div className="bg-primary rounded-[40px] p-12 md:p-24 text-center text-white relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400 to-transparent"></div>
+            <div className="rounded-[40px] p-12 md:p-24 text-center relative overflow-hidden">
+              <div className="absolute inset-0 z-0">
+                <img src="/抽象5.jpg" alt="" className="w-full h-full object-cover" />
+              </div>
               <div className="relative z-10">
-                <h2 className="font-hero-title text-4xl md:text-5xl mb-8">开启您的医疗 AI 进化之旅</h2>
-                <p className="text-zinc-400 text-lg mb-12 max-w-xl mx-auto">选择适合您的版本，即刻部署 Medical Agent OS 2.0，将医疗服务转化为领先的数字资产。</p>
+                <h2 className="font-hero-title text-4xl md:text-5xl mb-8 text-white">开启您的医疗 AI 进化之旅</h2>
+                <p className="text-white/90 text-lg mb-12 max-w-xl mx-auto">选择适合您的版本，即刻部署 Medical Agent OS 2.0，将医疗服务转化为领先的数字资产。</p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                   <button className="bg-white text-primary px-10 py-5 rounded-full font-bold hover:bg-zinc-100 transition-all">试用 EvoLeap</button>
-                  <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all">联系 Enterprise 销售</button>
+                  <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all">联系 EvoLeap 销售</button>
                 </div>
               </div>
             </div>

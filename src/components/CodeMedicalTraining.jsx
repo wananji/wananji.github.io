@@ -263,20 +263,25 @@ function CodeMedicalTraining() {
         {/* Dark CTA Section */}
         <section className="py-24 bg-surface-canvas">
           <div className="max-w-[1200px] mx-auto px-8">
-            <div className="bg-primary rounded-[2rem] p-12 md:p-20 text-center flex flex-col items-center">
+            <div className="rounded-[2rem] p-12 md:p-20 text-center flex flex-col items-center relative overflow-hidden">
+              <div className="absolute inset-0 z-0">
+                <img src="/抽象图块7.jpg" alt="" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative z-10">
               <h2 className="font-hero-title text-4xl md:text-5xl text-on-primary mb-6 font-bold tracking-tight">
                 开启您的医疗 AI 进化之旅
               </h2>
-              <p className="font-body-main text-lg text-on-primary/70 mb-10 max-w-2xl mx-auto">
+              <p className="font-body-main text-lg text-white mb-10 max-w-2xl mx-auto">
                 为您的团队提供转型传统医疗工作流所需的实战技能，释放医疗 AI 的真正潜力。
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-on-primary text-primary font-nav-item px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all">
                   联系我们定制培训方案
                 </button>
-                <button className="border border-on-primary/30 text-on-primary font-nav-item px-8 py-4 rounded-full font-semibold hover:bg-on-primary/10 transition-all">
-                  联系 Enterprise 销售
+                <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all">
+                  联系 EvoLeap 销售
                 </button>
+              </div>
               </div>
             </div>
           </div>

@@ -265,14 +265,19 @@ function Fujian() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-xl px-lg bg-surface-soft rounded-xl mb-xl text-center flex flex-col items-center gap-md max-w-[1200px] mx-auto">
-          <h2 className="font-section-title text-section-title text-text-primary">开启您的医疗 AI 进化之旅</h2>
-          <p className="font-body-main text-body-main text-text-secondary max-w-2xl">
-            加入数百家顶尖医疗机构，利用 EvoLeap AI 的智能技术重塑您的临床工作流。
-          </p>
-          <button className="bg-primary text-on-primary px-lg py-sm rounded-full font-nav-item text-nav-item hover:shadow-lg transition-all">
-            试用 EvoLeap
-          </button>
+        <section className="py-xl px-lg rounded-xl mb-xl text-center flex flex-col items-center gap-md max-w-[1200px] mx-auto relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src="/抽象3.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="relative z-10">
+            <h2 className="font-section-title text-section-title text-white">开启您的医疗 AI 进化之旅</h2>
+            <p className="font-body-main text-body-main text-white/90 max-w-2xl">
+              加入数百家顶尖医疗机构，利用 EvoLeap AI 的智能技术重塑您的临床工作流。
+            </p>
+            <button className="bg-white text-primary px-lg py-sm rounded-full font-nav-item text-nav-item hover:shadow-lg transition-all">
+              试用 EvoLeap
+            </button>
+          </div>
         </section>
       </main>
 
